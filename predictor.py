@@ -1,9 +1,20 @@
+"""
+Predictor Module
+
+This module provides functionality for loading a pre-trained model and running tracking on video sequences.
+
+This module provides:
+- Loading a pre-trained model
+- Reading initial bounding boxes
+- Running a tracker on video sequences
+"""
+
 import os
 import cv2
 import torch
 import sys
 from download import download_checkpoint
-
+    
 def load_model(device="cuda"):
     """
     Load model + checkpoint here.

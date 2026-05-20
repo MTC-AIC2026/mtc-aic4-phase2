@@ -1,5 +1,21 @@
-import gdown
+"""
+Download Module
+
+A brief description of what this module does.
+
+This module provides:
+- Downloading files from Google Drive
+- Managing checkpoint directories
+- Checking for existing files before download
+
+You are required to replace "YOUR_FILE_ID" with the actual file ID from Google Drive to download the checkpoint.
+Or replace the download method with your preferred method if you are not using Google Drive.
+
+"""
+
 import os
+import gdown
+
 
 def download_checkpoint(file_id, checkpoint_dir="./checkpoints"):
     """
@@ -32,7 +48,7 @@ def download_checkpoint(file_id, checkpoint_dir="./checkpoints"):
     # Example link:
     # https://drive.google.com/file/d/FILE_ID/view
     # put your file id instead
-    
+
     url = (
         f"https://drive.google.com/uc?id={file_id}"
     )

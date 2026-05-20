@@ -65,7 +65,10 @@ Example:
 ```text
 checkpoints/model.pth
 ```
-
+> You are required to replace "YOUR_FILE_ID" with the actual file ID from Google Drive to download the checkpoint.
+Or replace the download method with your preferred method if you are not using Google Drive.
+>
+> If we cannot download the file successfully, your team will be disqualified 
 ---
 
 # Step 2 — Run Inference

@@ -1,3 +1,15 @@
+"""
+Inference Module
+
+This module provides functionality for running inference on video sequences using a pre-trained model.
+
+This module provides:
+- Running inference on video sequences
+- Loading models
+- Writing predictions to CSV
+
+"""
+
 import sys
 import json
 import csv
@@ -16,7 +28,7 @@ DEVICE = (
 )
 
 def load_json(path):
-
+    """ Load JSON file from the given path."""
     with open(path, "r") as f:
         data = json.load(f)
 
@@ -24,7 +36,7 @@ def load_json(path):
 
 
 def write_csv(rows, output_path):
-
+    """ Write rows to a CSV file at the given output path."""
     with open(output_path, "w", newline="") as f:
 
         writer = csv.writer(f)
@@ -81,7 +93,10 @@ def run_sequence(
 
     return predictions
 
-def main():
+def infer_dataset():
+    """
+    Run inference on the entire dataset.
+    """
 
     if len(sys.argv) != 4:
 
@@ -166,4 +181,4 @@ def main():
     print(f"Saved: {output_csv}")
 
 if __name__ == "__main__":
-    main()
+    infer_dataset()
